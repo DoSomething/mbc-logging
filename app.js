@@ -1,15 +1,10 @@
 var express = require('express');
-var path = require('path');
 var logger = require('morgan');
 var amqp = require('amqp');
 var PHPUnserialize = require('php-unserialize');
 
 // Database
 var db = require('monk')('localhost:27017/drupal-logging');
-
-
-// Routes
-var routes = require('./routes/index');
 
 var app = express();
 

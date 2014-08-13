@@ -1,0 +1,20 @@
+{
+  "host": "rabbit1",
+  "port": 8888,
+  "login": "login",
+  "password": "password",
+  "connectionTimeout": 0,
+  "authMechanism": "AMQPLAIN",
+  "vhost": "vhost",
+  "noDelay": true,
+  "ssl_enabled": false,
+  "defaultExchangeName": "transactionalExchange",
+  "passive": 0,
+  "durable": 1,
+  "exclusive": 0,
+  "autoDelete": 0,
+  "mongo": {
+    "host": "mbc-logging.mongo",
+    "port": 8889
+  }
+}

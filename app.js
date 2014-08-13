@@ -4,14 +4,15 @@ var amqp = require('amqp');
 var PHPUnserialize = require('php-unserialize');
 
 // Database
+var mb_config = require(__dirname + '/config/mb_config.json');
+// var db = require('monk')(mb_config.mongo.host + ':' + mb_config.mongo.port + '/drupal-logging');
 var db = require('monk')('localhost:27017/drupal-logging');
-
+console.log(db);
 var app = express();
 
 app.use(logger('dev'));
 
 // RabbitMQ
-var mb_config = require(__dirname + '/config/mb_config.json');
 var conn = amqp.createConnection({
   host: mb_config.host,
   port: mb_config.port,
@@ -48,8 +49,6 @@ var conn = amqp.createConnection({
     });
   });
 });
-
-
 
 /// error handlers
 

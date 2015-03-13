@@ -10,3 +10,7 @@ This is a very simple node app that takes events from RabbitMQ and logs them int
 2. run `cd mbc-logging && npm install`
 3. Add a `mb_config.json` file that contains RabbitMQ connection settings.
 4. Start the app`DEBUG=mbc-logging ./bin/www`
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/DoSomething/mbc-logging/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
